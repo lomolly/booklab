@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="page-wrap">
+    <div class="container">
+        <div class="main-title">
+            <h3>Recently Added</h3>
+        </div>
+        <div class="content">
+            <div class="card" *ngFor="let book of bookList">
+                <img src={{book.img}}>
+                <div class="card-content">
+                    <p>{{book.title}}</p>
+                    <h5>{{book.author}}</h5>
+                    <span class="like" (click)="AddToFav(book)"><a>&#9825;</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

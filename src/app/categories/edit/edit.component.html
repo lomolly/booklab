@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="form-container">
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+            <div class="input-div">
+                <h5>Category Name:</h5>
+                <input type="number"  formControlName="id" hidden/>
+                <input type="text"  formControlName="name" placeholder="Enter category name..."/>
+                <div class="error-div" *ngIf="f.name.touched || f.add.invalid && submitted" class="invalid-feedback">
+                    <div class="error" *ngIf="f.name.errors?.required">Category Name is required</div>
+                </div>
+            </div>
+            <div class="form-btn">
+                <button type="submit" class="form-btn">Update</button>
+            </div>
+        </form> 
+    </div>
+</div>

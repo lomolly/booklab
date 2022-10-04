@@ -1,0 +1,46 @@
+.container{
+    padding: 10px;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+form {
+    padding-left: 100px;
+    padding-right: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.input-div input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-btn{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-btn button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    background-color: burlywood;
+    color: #a36b03;
+    border-radius: 5px;
+    border: none;
+    margin: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.error{
+    color: rgb(216, 19, 19);
+    font-weight: 500;
+    padding: 5px;
+}

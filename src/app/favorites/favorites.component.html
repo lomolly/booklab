@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="page-wrap">
+    <div class="container">
+        <div class="content" *ngIf="!favoriteList">
+            <div class="no-content">
+                No Books added to favorite
+            </div>
+        </div>
+        <div class="content" *ngIf="favoriteList">
+            <div class="card" *ngFor="let book of favoriteList">
+                <img src={{book.img}}>
+                <div class="card-content">
+                    <p>{{book.title}}</p>
+                    <h5>{{book.author}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

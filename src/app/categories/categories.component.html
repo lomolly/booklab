@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <app-add-btn [type]="'button'" [name]="'Add Category'" routerLink="/categories/add"></app-add-btn>
+    <div class="category-div">
+        <div class="wrapper">
+            <div class="category-content">
+                <h4>Name</h4>
+                <h4>Action</h4>
+            </div>
+            <div class="category-list" *ngFor="let category of categoryList">
+                <p>{{category.name}}</p>
+                <h5><a class="edit" (click)="editCategory(category)">Edit</a> | <span class="delete" (click)="deleteCategory(category)">Delete</span></h5>
+            </div>
+        </div>
+    </div>  
+</div>

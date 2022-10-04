@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <app-add-btn [type]="'button'" [name]="'Add Book'" routerLink="/books/add"></app-add-btn>
+    <div class="search-bar">
+        <input type="text" class="search" placeholder="Search for books..." />
+        <button type="button" >Search</button> 
+     </div>
+    
+    <div class="table-content">
+        <table>
+            <tr>
+              <th>S/N</th>
+              <th>Cover</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let book of bookList">
+              <td>{{book.id}}</td>
+              <td><img src={{book.img}} /></td>
+              <td>{{book.title}}</td>
+              <td>{{book.author}}</td>
+              <td><span [ngClass]="{
+                'cat1':book.category === 'Friction',
+                'cat2':book.category === 'Romance',
+                'cat3':book.category === 'History'
+              }">{{book.category}}</span></td>
+             
+              <h5><a class="edit" (click)="editBook(book)">Edit</a> | <a class="delete" (click)="deleteBook(book)">Delete</a></h5>
+            </tr>
+          </table>
+    </div>
+</div>

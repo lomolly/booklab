@@ -1,0 +1,46 @@
+.container {
+    margin-top: 20px;
+}
+
+.category-div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 120px;
+}
+.wrapper {
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 400px;
+    overflow: scroll;
+    // padding: 20px;
+}
+.category-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    color:rgba(47, 47, 47, 0.35);
+    background-color: antiquewhite;
+}
+
+.category-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: 300;
+}
+
+.add-books {
+    display: flex;
+    justify-content: end;
+    margin-top: 100px;
+}
+.delete {
+    color: red;
+    cursor: pointer;
+}
+.edit {
+    color: rgb(135, 190, 235);
+    cursor: pointer;
+}

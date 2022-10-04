@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="form-container">
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+
+            <div class="input-div">
+                <h5>Book Title:</h5>
+                <input type="text" placeholder="" formControlName="title"/>
+                <div class="error-div" *ngIf="f.title.touched || f.title.invalid && submitted" class="invalid-feedback">
+                    <div class="error" *ngIf="f.title.errors?.required">Title is required</div>
+                </div>
+            </div>
+            <div class="input-div">
+                <h5>Author:</h5>
+                <input type="text" placeholder="" formControlName="author"/>
+                <div class="error-div" *ngIf="f.author.touched || f.author.invalid && submitted" class="invalid-feedback">
+                    <div class="error" *ngIf="f.author.errors?.required">Author is required</div>
+                </div>
+            </div>
+            <div class="input-div">
+                <h5>Select Category:</h5>
+                <select type="text" placeholder="" formControlName="category">
+                    <option>Friction</option>
+                    <option>Romance</option>
+                    <option>History</option>
+                    <option>Fantasy</option>
+                </select>
+                <div class="error-div" *ngIf="f.category.touched || f.category.invalid && submitted" class="invalid-feedback">
+                    <div class="error" *ngIf="f.category.errors?.required">Category is required</div>
+                </div>
+            </div>
+            <div class="form-btn">
+                <button type="submit" class="form-btn">Update</button>
+            </div>
+        </form> 
+    </div>
+</div>
